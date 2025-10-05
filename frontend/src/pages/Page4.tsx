@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { SearchBar } from "../components/SearchBar";
 import { Navigation } from "../components/Navigation";
 import { Footer } from "../components/Footer";
-import { BackToTopButton } from "../components/BackToTopButton";
+// import { BackToTopButton } from "../components/BackToTopButton";
 import { ArrowLeft, FileText, Users, AlertCircle, ExternalLink } from "lucide-react";
 import type { ArticleSummary } from "../types";
 import { getArticleSummary } from "../services/ArticleService";
@@ -439,7 +439,7 @@ export default function Page4() {
             </div>
 
             <Footer />
-            <BackToTopButton />
+            {/* <BackToTopButton /> */}
         </div>
     );
 }
