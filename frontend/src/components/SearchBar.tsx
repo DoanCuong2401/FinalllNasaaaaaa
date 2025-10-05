@@ -22,7 +22,7 @@ export function SearchBar({
     const wrapperRef = useRef<HTMLDivElement>(null);
     const navigate = useNavigate();
 
-    // Đóng dropdown khi click ra ngoài
+ 
     useEffect(() => {
         const handleClickOutside = (e: MouseEvent) => {
             if (wrapperRef.current && !wrapperRef.current.contains(e.target as Node)) {
@@ -33,7 +33,7 @@ export function SearchBar({
         return () => document.removeEventListener("mousedown", handleClickOutside);
     }, []);
 
-    // Hàm tìm kiếm (không debounce, gọi trực tiếp)
+
     const handleSearch = useCallback(async (q: string) => {
         const trimmed = q.trim();
         if (trimmed.length < 1) {
@@ -54,7 +54,7 @@ export function SearchBar({
         }
     }, []);
 
-    // Xử lý chọn bằng bàn phím
+
     const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
         if (!showDropdown || results.length === 0) return;
         if (e.key === "ArrowDown") {
@@ -73,7 +73,7 @@ export function SearchBar({
         }
     };
 
-    // Highlight từ khóa trong tiêu đề
+    // Highlight keywords
     const highlightText = (text: string, keyword: string) => {
         if (!keyword) return text;
         const regex = new RegExp(`(${keyword})`, "gi");
@@ -98,7 +98,7 @@ export function SearchBar({
                     value={query}
                     onChange={(e) => {
                         setQuery(e.target.value);
-                        handleSearch(e.target.value); // gọi trực tiếp, không debounce
+                        handleSearch(e.target.value); 
                     }}
                     onKeyDown={handleKeyDown}
                     className={`w-full text-sm pr-10 ${variant === "homepage"
@@ -106,7 +106,7 @@ export function SearchBar({
                             : "px-3 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
                         }`}
                 />
-                {/* Icon hoặc loading */}
+                {/* Icon or loading */}
                 <div className="absolute right-2 top-1/2 -translate-y-1/2 text-gray-500">
                     {loading ? (
                         <Loader2 className="w-4 h-4 animate-spin" />
@@ -116,7 +116,7 @@ export function SearchBar({
                 </div>
             </div>
 
-            {/* Dropdown kết quả */}
+            {/* Dropdown */}
             {showDropdown && (
                 <ul className="absolute left-0 right-0 mt-1 bg-white border border-gray-200 rounded-lg shadow-lg max-h-96 overflow-y-auto z-50">
                     {results.length > 0 ? (

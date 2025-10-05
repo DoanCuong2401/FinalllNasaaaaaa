@@ -26,7 +26,6 @@ export interface SearchRequest {
     limit: number;
 }
 
-// Article summary với cấu trúc JSON từ Backend
 export interface ArticleSummary {
     title: string;
     authors: string[];

@@ -30,7 +30,7 @@ const topics = [
     return (
         <div className="min-h-screen flex flex-col relative">
             <StarBackground />
-            {/* NavBar (Logo trái, Search giữa, Links phải) */}
+            {/* NavBar */}
             <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-200 shadow">
                 <div className="container mx-auto px-6 py-3 flex items-center justify-between">
 
@@ -42,7 +42,7 @@ const topics = [
                         {/* <img src="/images/logo.png" alt="Logo" className="h-10 w-10" /> */}
                         <span className="text-xl font-bold text-blue-600">NASA Space Apps Challenge</span>
                     </div>
-                    {/* SearchBar ở giữa */}
+                    {/* SearchBar */}
                     <SearchBar className="mx-8 flex-1" placeholder="Search ..." />
                     <button
                         type="submit"

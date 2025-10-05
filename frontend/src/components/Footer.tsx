@@ -20,7 +20,7 @@ export function Footer() {
             />
 
             <div className="container mx-auto px-6 relative z-10">
-                {/* Grid 3 cột */}
+
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
                     {/* Left: Info */}
                     <div className="md:col-span-2">
