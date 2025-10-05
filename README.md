@@ -1,17 +1,22 @@
-- create .env file like .env.example
+### Step 1: 
+    Install Docker Desktop Application, Node.js, Ollama to your device
+### Step 2:
+    - Open the terminal to run Ollama:
+        - ollama run gemma:7b
+### Step 3:
+    - Open the terminal and run 
+        - cd ..\frontend
+        - npm install
+        - npm run build
+### Step 4:
+    - Open Docker Desktop
+    - Open the terminal to run the command
+        - cp .env.example .env
+    - Acess backend/config/config.yaml and change ingestion/run: True then
+        - run two command
+            - docker-compose build
+            - docker-compose up 
+    - Change run: True to run: False then repeat two command above
+### Step 5: 
+    - Open Ollama then access localhost:3000 to run the project
 
-- first time, u must fix the var ingestion/run=True in backend/config/config.yaml to load data
-- next time u must replace it to false to ignore loading data
-
-- run 2 command:
-    - docker-compose build
-    - docker-compose up
-
-
-- note:
-- docker-compose build for the first time may waste too much time (30p or 1h i dont know bout that.., it's up to your device), but next time it'll be faster
-
-- docker-compose up to run backend
-
-
-- if something failed, call me...
