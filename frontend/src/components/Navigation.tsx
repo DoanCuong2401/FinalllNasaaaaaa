@@ -2,7 +2,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { ChevronDown } from "lucide-react";
 
-// ✅ Dùng id số để trùng với TopicPage
+// Dùng id số để trùng với TopicPage
 const topics = [
     { id: "1", name: "Vertebrate" },
     { id: "2", name: "Plants" },
@@ -73,7 +73,7 @@ export function Navigation() {
                         {topics.map((topic) => (
                             <Link
                                 key={topic.id}
-                                to={`/topic/${topic.id}`} // ✅ path bằng số id
+                                to={`/topic/${topic.id}`} // path bằng số id
                                 className="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600 transition-colors first:rounded-t-lg last:rounded-b-lg border-b last:border-b-0"
                                 onClick={() => setShowTopicsDropdown(false)}
                             >

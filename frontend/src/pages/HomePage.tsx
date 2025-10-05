@@ -30,7 +30,7 @@ const topics = [
     return (
         <div className="min-h-screen flex flex-col relative">
             <StarBackground />
-            {/* ✅ NavBar (Logo trái, Search giữa, Links phải) */}
+            {/* NavBar (Logo trái, Search giữa, Links phải) */}
             <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-200 shadow">
                 <div className="container mx-auto px-6 py-3 flex items-center justify-between">
 
@@ -80,7 +80,7 @@ const topics = [
                                     }}
                                     className="px-4 py-2 hover:bg-blue-50 cursor-pointer flex items-center space-x-2"
                                     >
-                                    {/* ✅ dùng ảnh thay vì emoji */}
+                               
                                     <img
                                         src={topic.image}
                                         alt={topic.name}
@@ -115,7 +115,7 @@ const topics = [
 
             {/* Hero Section */}
             <section className="pt-12 pb-20 text-center from-white to-blue-50">
-                {/* Logo to, gần navbar hơn */}
+                
                 <img
                     src="/images/logo.png"
                     alt="Logo"

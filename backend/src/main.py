@@ -129,7 +129,7 @@ def extract_pdf_url(soup: BeautifulSoup, base_url: str) -> str:
     meta_pdf = soup.find("meta", {"name": "citation_pdf_url"})
     if meta_pdf and meta_pdf.get("content"):
         pdf_url = meta_pdf["content"]
-        print(f"✅ Found PDF via meta tag: {pdf_url}")
+        print(f" Found PDF via meta tag: {pdf_url}")
         return pdf_url
     
     # Method 2: Tìm link có text "PDF" hoặc href chứa ".pdf"
@@ -173,7 +173,7 @@ def extract_pdf_url(soup: BeautifulSoup, base_url: str) -> str:
         elif not pdf_url.startswith("http"):
             pdf_url = urljoin(base_url, pdf_url)
         
-        print(f"✅ Found PDF URL: {pdf_url}")
+        print(f" Found PDF URL: {pdf_url}")
         return pdf_url
     
     print("⚠️ No PDF URL found")

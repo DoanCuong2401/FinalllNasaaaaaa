@@ -10,7 +10,6 @@ import type { ArticleSummary } from "../types";
 import { getArticleSummary } from "../services/ArticleService";
 import { ArticleChatbox } from "../components/ArticleChatbox";
 
-// ✅ Parse content với regex an toàn hơn
 function parseContentSections(content: string): { heading: string; items: string[] }[] {
     if (!content || typeof content !== 'string') return [];
 
@@ -79,7 +78,7 @@ function parseContentSections(content: string): { heading: string; items: string
         }));
 }
 
-// ✅ Component hiển thị section
+// Component hiển thị section
 function SectionCard({
     title,
     content,
